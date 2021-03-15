@@ -21,7 +21,7 @@
 //= require turbolinks
 //= require_tree .
 
-var title = "ようこそ遊びの世界へ";
+var title = "ようこそ大正時代へ";
 alert(title);
 
 
