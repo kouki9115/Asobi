@@ -1,6 +1,10 @@
-<h1>Blogsshow</h1>
+<h1>情報</h1>
+
+      <th><%= @blog.title %></th>
+      <th><%= @blog.category %></th>
+      <th><%= attachment_image_tag @blog, :image, :fill, 50, 50, format: 'jpeg' %></th>
+      <th><%= @blog.body %></th>
+      <th><%= @blog.created_at.to_s(:datetime_jp) %></th>
 
 <%= link_to "編集", edit_blog_path(@blog) %>
-
-<%= image_tag 'kimetu-rengoku.jpg', size: 'x' %>
-<p class="jquery">心を燃やせ!</p>
+<%= link_to "削除", blog_path(@blog), method: :delete %> 
