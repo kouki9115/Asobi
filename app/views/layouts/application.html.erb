@@ -19,6 +19,8 @@
         　<span class="navbar-toggler-icon"></span>
       　</button>
     <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to '鬼殺隊 一覧', users_path %></li>
+    <li><%= link_to '事件 一覧', blogs_path %></li>
   </header>  
     <% else %>
    <header>

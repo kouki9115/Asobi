@@ -1,0 +1,10 @@
+<h1>鬼殺隊員　一覧</h1>
+
+
+
+<% @users.each do |user| %>
+<%= user.name %>
+<%= attachment_image_tag user, :profile_image, :fill, 60, 60 %>
+<%=link_to "隊員情報", user_path(user) %>
+<% end %>
+

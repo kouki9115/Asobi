@@ -1,10 +1,17 @@
 <main>
+ <% if @blog.errors.any? %>
+ <%= @blog.errors.count %>件のエラーが発生しました
+ <% @blog.errors.full_messages.each do |message| %>
+ <%= message %>
+ <% end %>
+ <% end %>
+
  <h1>連絡網</h1>
 <div class="containar">
  <div class="row">
   <div class="col-lg-4">
    <h1>事件</h1>
-   <%= form_with model:@blog_new, local:true do |f| %>
+   <%= form_with model: @blog, local:true do |f| %>
    <h4>鬼</h4>
    <%= f.text_field :title %>
    <h4>位</h4>
@@ -39,7 +46,7 @@
       <th><%= blog.body %></th>
       <th><%= blog.created_at.to_s(:datetime_jp) %></th>
       <th><%= link_to "詳細", blog_path(blog) %></th>
-      <th><%= link_to "削除", blog_path(blog), method: :delete %> </th>
+      <th><%= link_to "削除", blog_path(blog), method: :delete %></th>
      </tr>
     </tbody>
     <% end %>
