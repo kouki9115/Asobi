@@ -1,10 +1,34 @@
-<h1>鬼殺隊員　一覧</h1>
+<main>
+ <div class="containar">
+  <div class="row">
+   <div class="col-lg-4 col-md-4 col-sm-4 col-xl-4", style=" padding: 0;">
+    <div><%= image_tag "disney.jpg", width: "100%", height: "800" %></div>
+   </div>
 
+   <div class="col-lg-8 col-md-8 col-sm-8 col-xl-8", style=" padding: 0;">
+   <div><%= image_tag "tree.jpg", width: "100%", height: "800" %>
+    <div class="card-img-overlay">
+     <div class="text-white">
 
-
+User List
 <% @users.each do |user| %>
-<%= user.name %>
-<%= attachment_image_tag user, :profile_image, :fill, 60, 60 %>
-<%=link_to "隊員情報", user_path(user) %>
+<table>
+<tbody>
+ <tr>
+  <th><%= attachment_image_tag user, :profile_image, :fill, 200, 200 %></th>
+  <th><%= user.name %></th>
+  <th><%=link_to "SHOW", user_path(user) %></th>
 <% end %>
+ </tr>
+</tbody>
+</table>
 
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
