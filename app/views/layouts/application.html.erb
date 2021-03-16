@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Asobi</title>
+    <title>Playground</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/*******.js" crossorigin="anonymous"></script>
@@ -14,34 +14,32 @@
     <% if user_signed_in? %>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Asobi</a>
+      <a class="navbar-brand" href="/">Playground</a>
       　<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         　<span class="navbar-toggler-icon"></span>
       　</button>
-    <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <li><%=link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <li><%= link_to 'User List', users_path %></li>
-    <li><%= link_to ' Playground', blogs_path %></li>
-  </header>  
+    <li><%= link_to " Everyone's Playground", blogs_path %></li>
+  </header>
     <% else %>
    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Asobi</a>
+      <a class="navbar-brand" href="/">Playground</a>
       　<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         　<span class="navbar-toggler-icon"></span>
       　</button>
-    <li><%= link_to "新規登録", new_user_registration_path %></li>
-    <li><%= link_to "ログイン", new_user_session_path %></li>
+    <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <li><%= link_to "Log in", new_user_session_path %></li>
     </nav>
   </header>
     <% end %>
     <%= yield %>
 
     <footer>
-     <div class="container mt-5">
+     <div class="container mt-2">
   	  <div class="row">
-    	 <div class="mx-auto">
-         <p>k</p>
-       </div>
+    	 <div class="mx-auto"><p>k</p></div>
       </div>
      </div>
     </footer>

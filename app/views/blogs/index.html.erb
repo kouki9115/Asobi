@@ -1,39 +1,40 @@
 <main>
- <% if @blog.errors.any? %>
- <%= @blog.errors.count %>件のエラーが発生しました
- <% @blog.errors.full_messages.each do |message| %>
- <%= message %>
- <% end %>
- <% end %>
-
- <h1>連絡網</h1>
 <div class="containar">
  <div class="row">
-  <div class="col-lg-4">
-   <h1>事件</h1>
+  <div class="col-lg-4"><%#= image_tag "ocean.jpg", width: "100%", height: "180" %>
+   <div class="card-img-overlay">
+    <p class="text-white">
+      <% if @blog.errors.any? %>
+       <%= @blog.errors.count %>件のエラーが発生しました
+       <% @blog.errors.full_messages.each do |message| %>
+       <%= message %>
+       <% end %>
+      <% end %></p>
+   <h1>New post</h1>
    <%= form_with model: @blog, local:true do |f| %>
-   <h4>鬼</h4>
+   <h4>Title</h4>
    <%= f.text_field :title %>
-   <h4>位</h4>
+   <h4>Category</h4>
    <%= f.text_field :category %>
-   <h4>内容</h4>
+   <h4>Contents</h4>
    <%= f.text_area :body %>
-   <h4>写真</h4>
+   <h4>Picture</h4>
    <%= f.attachment_field :image %>
 
-   <%= f.submit '投稿'%>
+   <%= f.submit 'Post'%>
    <% end %>
+   </div>
   </div>
 
-  <div class="col-lg-8">
+  <div class="col-lg-8, mt-5">
    <table>
     <thead>
      <tr>
-      <th>鬼</th>
-      <th>位</th>
-      <th>写真</th>
-      <th>内容</th>
-      <th>投稿日時</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Picture</th>
+      <th>Contents</th>
+      <th>Date</th>
       <th calspan="2"></th>
      </tr>
     </thead>
@@ -52,6 +53,11 @@
     <% end %>
    </table>
   </div>
+ </div>
+</div>
+<div="containar">
+ <div="row">
+  
  </div>
 </div>
 </main>
