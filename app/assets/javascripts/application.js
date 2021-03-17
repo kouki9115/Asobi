@@ -21,6 +21,8 @@
 //= require turbolinks
 //= require_tree .
 
+ //= require audiojs
+
 var title = "Welcom to Playground";
 alert(title);
 
@@ -30,3 +32,5 @@ $(document).ready(function () {
     $(this).css('color','red');
   });
 });
+
+
