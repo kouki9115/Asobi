@@ -6,6 +6,7 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @post_comment=PostComment.new
   end
 
   def new

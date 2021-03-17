@@ -39,6 +39,7 @@
       <th>Title</th>
       <th>Contents</th>
       <th>Date</th>
+      <th></th>
       <th calspan="2"></th>
      </tr>
     </thead>
@@ -50,6 +51,7 @@
       <th><%= blog.title %></th>
       <th><%= blog.body %></th>
       <th><%= blog.created_at.to_s(:datetime_jp) %></th>
+      <th><%= link_to "#{blog.post_comments.count} コメント", blog_path(blog.id) %></th>
       <th><%= link_to "詳細", blog_path(blog) %></th>
       <th><%= link_to "削除", blog_path(blog), method: :delete %></th>
      </tr>
