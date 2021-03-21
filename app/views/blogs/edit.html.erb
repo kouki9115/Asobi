@@ -8,13 +8,13 @@
 <h1>情報編集</h1>
 <!-- form_with部分 -->
 <%= form_with model: @blog, local: true do |f| %>
-   <h4>鬼</h4>
+   <h4>Title</h4>
    <%= f.text_field :title %>
-   <h4>位</h4>
+   <h4>Category</h4>
    <%= f.text_field :category %>
-   <h4>内容</h4>
+   <h4>Contents</h4>
    <%= f.text_area :body %>
-   <h4>写真</h4>
+   <h4>Picture</h4>
    <%= f.attachment_field :image %>
   <%= f.submit '保存' %>
   
